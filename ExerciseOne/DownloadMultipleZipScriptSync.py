@@ -81,6 +81,7 @@ for code in codes:
             # After downloading, check if the file exists to confirm it's completed
         if os.path.exists(output_path):
             print(f"Downloaded {code} successfully to {output_path}\n")
+            os.remove(output_path)
         else:
             print(f"Failed to download {code}. File not found after download.\n")
     
@@ -101,4 +102,3 @@ for code in codes:
         print(f"An error occurred while downloading {code}: {e}")
 
   
-    os.remove(output_path)
